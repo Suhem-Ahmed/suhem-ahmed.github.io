@@ -4,9 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mohammed Suhem Ahmed – Portfolio</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Schoolbell&display=swap');
 
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Schoolbell&display=swap" rel="stylesheet">
+
+  <!-- Favicon fix -->
+  <link rel="icon" href="data:,">
+
+  <style>
     :root {
       --bg-color: #0c0c0c;
       --card-bg: rgba(0, 0, 0, 0.4);
@@ -25,8 +34,13 @@
       font-family: 'Outfit', sans-serif;
       color: var(--text-main);
       background-color: var(--bg-color);
-      background-image: url('https://www.transparenttextures.com/patterns/blackboard.png');
-      background-size: cover;
+      background-image: repeating-linear-gradient(
+        45deg,
+        #0c0c0c,
+        #0c0c0c 10px,
+        #111 10px,
+        #111 20px
+      ); /* fallback texture */
       background-attachment: fixed;
       background-position: center;
     }
@@ -115,34 +129,7 @@
       padding-bottom: 8px;
     }
 
-    /* Projects Buttons container and links */
-    .projects-buttons {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 20px;
-    }
-
-    .projects-buttons a {
-      min-width: 140px;
-      text-align: center;
-      color: var(--text-main);
-      text-decoration: none;
-      border: 2px solid var(--text-main);
-      padding: 12px 28px;
-      border-radius: 30px;
-      font-size: 1rem;
-      transition: 0.3s;
-      display: inline-block;
-    }
-
-    .projects-buttons a:hover {
-      background: var(--text-main);
-      color: var(--bg-color);
-    }
-
-    /* Contact Buttons styling */
+    .projects-buttons,
     .contact-buttons {
       display: flex;
       gap: 20px;
@@ -151,6 +138,7 @@
       margin-top: 20px;
     }
 
+    .projects-buttons a,
     .contact-buttons a {
       min-width: 140px;
       text-align: center;
@@ -164,6 +152,7 @@
       display: inline-block;
     }
 
+    .projects-buttons a:hover,
     .contact-buttons a:hover {
       background: var(--text-main);
       color: var(--bg-color);
@@ -215,7 +204,6 @@
       <h2>Projects</h2>
       <div class="projects-buttons">
         <a href="https://github.com/Suhem-Ahmed" target="_blank">Visit My GitHub</a>
-
       </div>
     </div>
 
